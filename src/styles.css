@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+}
+div, aside, details, figcaption, figure, footer, header, main, mark, nav, section, summary, time {
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+}
+
+nav {
+  z-index: 9;
+}
+
+/* global classess */
+.formLight {
+  display: block;
+  background-color: #52192d;
+}

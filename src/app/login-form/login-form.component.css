@@ -1,0 +1,65 @@
+#loginFormWrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  max-width: 50vw;
+  width: 50vw;
+  max-height: 50vh;
+  height: 50vh;
+}
+
+label, button {
+display: flex;
+align-items: center;
+align-content: center;
+justify-content: center;
+justify-items: center;
+margin-top: 2vh;
+margin-bottom: 1vh;
+padding: 0;
+}
+
+label, input, button {
+  box-sizing: border-box;
+  width: 20vw;
+  outline: none;
+  border-radius: 5%;
+}
+
+.formLight {
+  max-height: 1vh;
+  height: 1vh;
+}
+
+input, .loginFormButton {
+  height: 4vh;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid gray;
+  outline: none;
+}
+
+input:invalid {
+  color: #52192d;
+  border: 1px solid #52192d;
+  outline: none;
+}
+
+input:valid {
+  color: green;
+  border: 1px solid green;
+  outline: none;
+}
+
+input:active, input:focus {
+  color: black;
+  border: 1px solid gray;
+  outline: none;
+}
+
+button:hover {
+  color: white;
+  background-color: gray;
+}

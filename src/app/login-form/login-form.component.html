@@ -1,0 +1,10 @@
+<div id="loginFormWrapper" class="wrapper">
+  <label for="username">Username: </label> <br>
+  <div id="usernameLight" class="formLight wrapper">
+  </div>
+  <input id="username" type="text" maxlength="40" required placeholder="Enter your username" [formControl]="username"> <br>
+  <label for="password">Password: </label> <br>
+  <div id="passwordLight" class="formLight wrapper"></div>
+  <input id="password" type="password" maxlength="100" required placeholder="Enter password" [formControl]="password"> <br>
+  <button id="loginButton" class="loginFormButton" type="submit">Login</button>
+</div>
