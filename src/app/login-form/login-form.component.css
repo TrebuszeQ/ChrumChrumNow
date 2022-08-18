@@ -5,10 +5,28 @@
   align-content: center;
   justify-content: center;
   justify-items: center;
+  padding: 2%;
   max-width: 50vw;
-  width: 50vw;
+  width: 30vw;
   max-height: 50vh;
   height: 50vh;
+  border: 0.25vw solid rgb(225, 147, 161);
+  background-color: #fff0f3;
+  border-radius: 5%;
+}
+
+form {
+  display: inherit;
+  flex-flow: inherit;
+  align-items: inherit;
+  align-content: inherit;
+  justify-content: inherit;
+  justify-items: inherit;
+  padding: 2%;
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
 }
 
 label, button {
@@ -17,49 +35,121 @@ align-items: center;
 align-content: center;
 justify-content: center;
 justify-items: center;
-margin-top: 2vh;
-margin-bottom: 1vh;
 padding: 0;
+
 }
 
-label, input, button {
+label {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  color: rgb(40, 40, 40)
+}
+
+label, input, button, .formLight {
   box-sizing: border-box;
+  padding: 2%;
   width: 20vw;
   outline: none;
-  border-radius: 5%;
+  border-radius: 10%;
+  text-decoration: bold;
+}
+
+button {
+  margin-top: 3vw;
+  height: 4vw;
+  width: 22vw;
+  color: #4b2d2d;
+  background-color: pink;
+  outline: none;
+  border: 0.25vw solid rgb(225, 147, 161);
+}
+
+input {
+  height: 3vw;
+  background-color: white;
+  color: #4b2d2d;
+  border-radius: 0 0 5% 5%;
+  border-top: none;
+  outline: none;
 }
 
 .formLight {
-  max-height: 1vh;
-  height: 1vh;
+  max-height: 0.7vw;
+  height: 0.7vw;
+  border-radius: 5% 5% 0 0;
 }
 
-input, .loginFormButton {
-  height: 4vh;
-  background-color: rgb(235, 235, 235);
-  border: 1px solid gray;
-  outline: none;
+.formLightGreen {
+  background-color: green;
 }
 
-input:invalid {
+.formLightRed {
+  background-color: #52192d;;
+}
+
+
+/* input:invalid {
   color: #52192d;
-  border: 1px solid #52192d;
+  border: 2px solid #52192d;
+  border-top: none;
   outline: none;
-}
+} */
 
-input:valid {
+/* input:valid {
   color: green;
-  border: 1px solid green;
+  border: 2px solid green;
+  border-top: none;
   outline: none;
-}
+} */
 
 input:active, input:focus {
   color: black;
-  border: 1px solid gray;
+  border: 2px solid rgb(86, 24, 82);;
+  border-top: none;
   outline: none;
 }
 
-button:hover {
+/* button:hover {
   color: white;
-  background-color: gray;
+  background-color: green;
+  border: 2px solid green;
+} */
+
+button:disabled {
+  background-color: #52192d;
+  color: white;
+  border: none;
+}
+
+button:disabled:hover {
+  background-color: #3b111f;
+}
+
+button:valid {
+  background-color: green;
+  color: white;
+  border: none;
+}
+
+button:valid:hover {
+  background-color: rgb(1, 106, 1);
+}
+
+p {
+  text-decoration: bold;
+  font-size: 1.2vw;
+}
+
+.ng-valid[required], .ng-valid.required {
+  color: green;
+  border: 2px solid green;
+  border-top: none;
+  outline: none;
+}
+
+.ng-invalid[required], .ng-invalid.ng-valid.required {
+  color: #52192d;
+  border: 2px solid #52192d;
+  border-top: none;
+  outline: none;
 }

@@ -1,10 +1,32 @@
 <div id="loginFormWrapper" class="wrapper">
-  <label for="username">Username: </label> <br>
-  <div id="usernameLight" class="formLight wrapper">
-  </div>
-  <input id="username" type="text" maxlength="40" required placeholder="Enter your username" [formControl]="username"> <br>
-  <label for="password">Password: </label> <br>
-  <div id="passwordLight" class="formLight wrapper"></div>
-  <input id="password" type="password" maxlength="100" required placeholder="Enter password" [formControl]="password"> <br>
-  <button id="loginButton" class="loginFormButton" type="submit">Login</button>
+  <form id="loginForm" accept-charset="utf-8" action="/" method="post" [formGroup]="loginForm" (reset)="this.loginForm.reset()" (ngSubmit)="sendData(username?.value, password?.value)">
+    <!-- username input -->
+    <label for="username">Username: </label> <br>
+    <!-- red -->
+    <div class="formLight formLightRed wrapper" *ngIf="username?.invalid">
+    </div>
+    <!-- green -->
+    <div class="formLight formLightGreen wrapper" *ngIf="username?.valid">
+    </div>
+    <!-- input -->
+    <input id="username" type="text" placeholder="Enter your username" minlength="4" maxlength="30" required formControlName="username"> <br>
+    <!-- password input -->
+    <label for="password">Password: </label> <br>
+    <!-- green -->
+    <div class="formLight formLightRed wrapper" *ngIf="password?.invalid">
+    </div>
+    <!-- red -->
+    <div class="formLight formLightGreen wrapper" *ngIf="password?.valid">
+    </div>
+    <!-- input -->
+    <input id="password" type="password"  placeholder="Enter password" minlength="8" maxlength="30" required formControlName="password"> <br>
+    <!-- submit -->
+    <button id="loginButton" class="loginFormButton" type="submit" value="submit" [disabled]="!loginForm.valid">
+      <p>Login</p>
+    </button>
+    <button id="resetButton" class="loginFormButton" type="reset" value="reset" [disabled]="loginForm.untouched">
+      <p>Reset</p>
+    </button>
+    <p>Form status: {{loginForm.status}}</p>
+  </form>
 </div>
