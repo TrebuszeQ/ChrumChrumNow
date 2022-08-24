@@ -1,0 +1,6 @@
+#dashboardWrapper {
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  background-color: #eed3d7;
+}

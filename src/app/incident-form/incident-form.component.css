@@ -1,0 +1,110 @@
+#formWrapper {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  z-index: 9;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background-color: #eed3d7;
+}
+
+
+#incidentForm {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* grid-template-columns: repeat(3, auto); */
+  width: 100%;
+  max-width: 100%;
+  flex-basis: auto;
+}
+
+#headerWrapper {
+  width: 100%;
+  height: 20vw;
+  padding: 5%;
+  margin: 0 0 7% 0;
+  background-color: pink;
+}
+
+#headerWrapper > h1 {
+  color: white;
+  text-align: center;
+}
+
+label, button, input, .formLight {
+  display: inherit;
+  flex-flow: inherit;
+  flex-wrap: inherit;
+  align-items: inherit;
+  align-content: inherit;
+  justify-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+label {
+  padding: 5% 0;
+  margin-top: 2%;
+  height: 5vw;
+  max-height: 5vw;
+  color: rgb(177, 90, 118);
+  background-color: pink;
+  font-size: 1.5rem;
+}
+
+input, button {
+  height: 7vw;
+  max-height: 7vw;
+  padding: 2%;
+  background-color: pink;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:hover, button:hover, textarea:hover, input:active, button:active, textarea:active, input:focus, button:focus, textarea:focus {
+  background-color: rgb(242, 142, 159);
+}
+
+input::placeholder {
+  color: white;
+}
+
+button:disabled {
+  background-color: rgb(177, 90, 118);
+}
+
+.formLight {
+  height: 2vw;
+  max-height: 2vw;
+  margin: 0;
+}
+
+#formStatus {
+  color: white;
+  text-align: center;
+  font-size: 2vw;
+}
+
+#longDescriptionArea {
+  height:20vw;
+  padding: 2%;
+  resize: vertical;
+  color: white;
+  background-color: pink ;
+  outline: none;
+  border: none;
+}
+
+textarea::placeholder {
+  color: white;
+  text-align: center;
+}

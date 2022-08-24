@@ -1,155 +1,95 @@
 #loginFormWrapper {
   display: flex;
   flex-flow: column;
+  flex-wrap: nowrap;
   align-items: center;
   align-content: center;
-  justify-content: center;
-  justify-items: center;
-  padding: 2%;
-  max-width: 50vw;
-  width: 30vw;
-  max-height: 50vh;
-  height: 50vh;
-  border: 0.25vw solid rgb(225, 147, 161);
-  background-color: #fff0f3;
-  border-radius: 5%;
+  z-index: 9;
+  overflow: hidden;
+  padding: 10%;
+  margin: 10% 0;
+  background-color: rgb(220, 163, 182);
+  border-radius: 10%;
+  width: 60vw;
+  max-width: 60vw;
 }
 
-form {
+#titleWrapper {
   display: inherit;
   flex-flow: inherit;
+  flex-wrap: inherit;
   align-items: inherit;
   align-content: inherit;
-  justify-content: inherit;
-  justify-items: inherit;
-  padding: 2%;
-  max-width: 100%;
+  justify-items: center;
+  justify-content: center;
+  margin: 0 0 10% 0;
+  color: white;
+  text-align: center;
+
+}
+
+#titleWrapper > h3 {
+  margin-top: 5%;
+  width: 80%;
+}
+
+#loginForm {
+  display: inherit;
+  flex-flow: inherit;
+  flex-wrap: inherit;
+  align-items: inherit;
+  align-content: inherit;
   width: 100%;
-  max-height: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
-label, button {
-display: flex;
-align-items: center;
-align-content: center;
-justify-content: center;
-justify-items: center;
-padding: 0;
-
+label, button, input, .formLight {
+  display: inherit;
+  flex-flow: inherit;
+  flex-wrap: inherit;
+  align-items: inherit;
+  align-content: inherit;
+  justify-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 80%;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
 }
 
-label {
-  margin-top: 2vh;
-  margin-bottom: 1vh;
-  color: rgb(40, 40, 40)
-}
-
-label, input, button, .formLight {
-  box-sizing: border-box;
+input, button {
+  height: 7vw;
+  max-height: 7vw;
   padding: 2%;
-  width: 20vw;
-  outline: none;
-  border-radius: 10%;
-  text-decoration: bold;
-}
-
-button {
-  margin-top: 3vw;
-  height: 4vw;
-  width: 22vw;
-  color: #4b2d2d;
+  margin: 0 0 3% 0;
   background-color: pink;
+  border: none;
   outline: none;
-  border: 0.25vw solid rgb(225, 147, 161);
+  box-sizing: border-box;
 }
 
-input {
-  height: 3vw;
-  background-color: white;
-  color: #4b2d2d;
-  border-radius: 0 0 5% 5%;
-  border-top: none;
-  outline: none;
+input:hover, button:hover {
+  background-color: rgb(242, 142, 159);
+}
+
+input::placeholder {
+  color: white;
+}
+
+button:disabled {
+  background-color: rgb(177, 90, 118);
 }
 
 .formLight {
-  max-height: 0.7vw;
-  height: 0.7vw;
-  border-radius: 5% 5% 0 0;
+  height: 2vw;
+  max-height: 2vw;
+  margin: 0;
 }
 
-.formLightGreen {
-  background-color: green;
-}
-
-.formLightRed {
-  background-color: #52192d;;
-}
-
-
-/* input:invalid {
-  color: #52192d;
-  border: 2px solid #52192d;
-  border-top: none;
-  outline: none;
-} */
-
-/* input:valid {
-  color: green;
-  border: 2px solid green;
-  border-top: none;
-  outline: none;
-} */
-
-input:active, input:focus {
-  color: black;
-  border: 2px solid rgb(86, 24, 82);;
-  border-top: none;
-  outline: none;
-}
-
-/* button:hover {
+#formStatus {
   color: white;
-  background-color: green;
-  border: 2px solid green;
-} */
-
-button:disabled {
-  background-color: #52192d;
-  color: white;
-  border: none;
-}
-
-button:disabled:hover {
-  background-color: #3b111f;
-}
-
-button:valid {
-  background-color: green;
-  color: white;
-  border: none;
-}
-
-button:valid:hover {
-  background-color: rgb(1, 106, 1);
-}
-
-p {
-  text-decoration: bold;
-  font-size: 1.2vw;
-}
-
-.ng-valid[required], .ng-valid.required {
-  color: green;
-  border: 2px solid green;
-  border-top: none;
-  outline: none;
-}
-
-.ng-invalid[required], .ng-invalid.ng-valid.required {
-  color: #52192d;
-  border: 2px solid #52192d;
-  border-top: none;
-  outline: none;
+  text-align: center;
+  font-size: 2vw;
 }

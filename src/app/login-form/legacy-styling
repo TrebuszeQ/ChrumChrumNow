@@ -1,0 +1,339 @@
+/* pc */
+@media only screen and (min-width: 600px) {
+  label, button, p {
+    font-size: 1.5vw;
+  }
+
+  #loginFormWrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    overflow: hidden;
+    max-width: 50vw;
+    width: 50vw;
+    max-height: 100vw;
+    height: 100vw;
+    padding: 2%;
+    background-color: #fff0f3;
+    border-radius: 10%;
+  }
+
+  form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 0;
+    padding: 2%;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+  }
+
+
+  #titleWrapper {
+    display: inherit;
+    flex-flow: inherit;
+    align-items: inherit;
+    align-content: inherit;
+    justify-items: inherit;
+    justify-content: inherit;
+    margin: 3% 0 3% 0;
+    padding: 2%;
+    width: 90%;
+    background-color: #ecadb8;;
+
+    border-radius: 10%;
+  }
+
+  h1, h3 {
+    color: white;
+    text-align: center;
+  }
+
+
+  label, button, p {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 0;
+    margin: 0;
+    text-decoration: bold;
+  }
+
+  .labelWrapper, label {
+    display: inherit;
+    flex-flow: inherit;
+    align-items: inherit;
+    align-content: inherit;
+    justify-content: inherit;
+    justify-items: inherit;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+
+  label {
+    box-sizing: border-box;
+  }
+
+  label, input, button, .formLight {
+    box-sizing: border-box;
+    padding: 2%;
+    width: 30vw;
+    outline: none;
+    text-decoration: bold;
+  }
+
+  button, .labelWrapper {
+    height: 8vw;
+    width: 30vw;
+    color: white;
+    background-color: pink;
+    outline: none;
+    border-radius: 10%;
+  }
+
+  button {
+    margin-top: 1.5vw;
+  }
+
+  input {
+    height: 3vw;
+    background-color: white;
+    color: #4b2d2d;
+    border-radius: 0 0 10% 10%;
+    border-top: none;
+    outline: none;
+  }
+
+  .formLight {
+    max-height: 0.7vw;
+    height: 0.7vw;
+    border-radius: 10% 10% 0 0;
+  }
+
+  .formLightGreen {
+    background-color: green;
+  }
+
+  .formLightRed {
+    background-color: #52192d;;
+  }
+
+
+  /* input:invalid {
+    color: #52192d;
+    border: 2px solid #52192d;
+    border-top: none;
+    outline: none;
+  } */
+
+  /* input:valid {
+    color: green;
+    border: 2px solid green;
+    border-top: none;
+    outline: none;
+  } */
+
+  input:active, input:focus {
+    color: black;
+    border: 2px solid rgb(86, 24, 82);;
+    border-top: none;
+    outline: none;
+  }
+
+  /* button:hover {
+    color: white;
+    background-color: green;
+    border: 2px solid green;
+  } */
+
+  button:disabled {
+    background-color: #52192d;
+    color: white;
+    border: none;
+  }
+
+  button:disabled:hover {
+    background-color: #3b111f;
+  }
+
+  button:valid {
+    background-color: green;
+    color: white;
+    border: none;
+  }
+
+  button:valid:hover {
+    background-color: rgb(1, 106, 1);
+  }
+
+  p {
+    text-decoration: bold;
+  }
+
+  .ng-valid[required], .ng-valid.required {
+    color: green;
+    border: 2px solid green;
+    border-top: none;
+    outline: none;
+  }
+
+  .ng-invalid[required], .ng-invalid.ng-valid.required {
+    color: #52192d;
+    border: 2px solid #52192d;
+    border-top: none;
+    outline: none;
+  }
+
+}
+
+/* mobile */
+@media only screen and (max-width: 599px) {
+  #loginFormWrapper {
+    padding: 2%;
+    height: 110vw;
+    max-height: 110vw;
+    max-width: 70vw;
+    width: 70vw;
+    border-radius: 10%;
+  }
+
+  form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 2%;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+  }
+
+  label, button, p {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 0;
+    margin: 0;
+    text-decoration: bold;
+  }
+
+  .labelWrapper, label {
+    display: inherit;
+    flex-flow: inherit;
+    align-items: inherit;
+    align-content: inherit;
+    justify-content: inherit;
+    justify-items: inherit;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+
+  label {
+    box-sizing: border-box;
+  }
+
+  label, input, button, .formLight {
+    box-sizing: border-box;
+    padding: 2%;
+    width: 40vw;
+    outline: none;
+    text-decoration: bold;
+  }
+
+  button, .labelWrapper {
+    height: 10vw;
+    width: 40vw;
+    color: white;
+    background-color: pink;
+    outline: none;
+    border-radius: 10%;
+  }
+
+  button {
+    margin-top: 1.5vw;
+  }
+
+  input {
+    height: 8vw;
+    background-color: white;
+    color: #4b2d2d;
+    border-radius: 0 0 10% 10%;
+    border-top: none;
+    outline: none;
+  }
+
+  .formLight {
+    max-height: 0.7vw;
+    height: 0.7vw;
+    border-radius: 10% 10% 0 0;
+  }
+
+  .formLightGreen {
+    background-color: green;
+  }
+
+  .formLightRed {
+    background-color: #52192d;;
+  }
+
+  input:active, input:focus {
+    color: black;
+    border: 2px solid rgb(86, 24, 82);;
+    border-top: none;
+    outline: none;
+  }
+
+  button:disabled {
+    background-color: #52192d;
+    color: white;
+    border: none;
+  }
+
+  button:disabled:hover {
+    background-color: #3b111f;
+  }
+
+  button:valid {
+    background-color: green;
+    color: white;
+    border: none;
+  }
+
+  button:valid:hover {
+    background-color: rgb(1, 106, 1);
+  }
+
+  p {
+    text-decoration: bold;
+  }
+
+  .ng-valid[required], .ng-valid.required {
+    color: green;
+    border: 2px solid green;
+    border-top: none;
+    outline: none;
+  }
+
+  .ng-invalid[required], .ng-invalid.ng-valid.required {
+    color: #52192d;
+    border: 2px solid #52192d;
+    border-top: none;
+    outline: none;
+  }
+
+}

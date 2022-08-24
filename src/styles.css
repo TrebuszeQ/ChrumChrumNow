@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Lucida Sans', sans-serif;
 }
+
 div, aside, details, figcaption, figure, footer, header, main, mark, nav, section, summary, time {
   float: left;
   position: relative;
@@ -12,8 +14,11 @@ nav {
   z-index: 9;
 }
 
-/* global classess */
-.formLight {
-  display: block;
-  background-color: #52192d;
+/* global classes */
+.formLightRed {
+  background-color: rgb(180, 66, 102);
+}
+
+.formLightGreen {
+  background-color: rgb(35, 129, 35);
 }

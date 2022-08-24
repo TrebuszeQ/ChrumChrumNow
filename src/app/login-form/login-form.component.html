@@ -1,4 +1,8 @@
 <div id="loginFormWrapper" class="wrapper">
+  <div id="titleWrapper" class="wrapper">
+    <h1>ChrumChrumNow</h1>
+    <h3>Ultimate piggy ticketing system.</h3>
+  </div>
   <form id="loginForm" accept-charset="utf-8" action="/" method="post" [formGroup]="loginForm" (reset)="this.loginForm.reset()" (ngSubmit)="sendData(username?.value, password?.value)">
     <!-- username input -->
     <label for="username">Username: </label> <br>
@@ -22,11 +26,11 @@
     <input id="password" type="password"  placeholder="Enter password" minlength="8" maxlength="30" required formControlName="password"> <br>
     <!-- submit -->
     <button id="loginButton" class="loginFormButton" type="submit" value="submit" [disabled]="!loginForm.valid">
-      <p>Login</p>
+      Login
     </button>
     <button id="resetButton" class="loginFormButton" type="reset" value="reset" [disabled]="loginForm.untouched">
-      <p>Reset</p>
+      Reset
     </button>
-    <p>Form status: {{loginForm.status}}</p>
+    <p id="formStatus"><br>Form status: {{loginForm.status}}</p>
   </form>
 </div>

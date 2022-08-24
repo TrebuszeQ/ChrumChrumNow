@@ -4,30 +4,15 @@
   align-items: center;
   align-content: center;
   justify-items: center;
-  justify-content: center;
-  margin: 0 10%;
-  max-width: 80%;
-  width: 80%;
+  overflow: hidden;
+  margin: 0 5%;
+  max-width: 90%;
+  width: 90%;
   max-height: 100vh;
   height: 100vh;
   background-color: #eed3d7;
 }
 
-#titleWrapper {
-  display: inherit;
-  flex-flow: inherit;
-  align-items: inherit;
-  align-content: inherit;
-  justify-items: inherit;
-  justify-content: inherit;
-  margin-bottom: 20%;
-  width: 60%;
-  background-color: #ecadb8;;
-  border: 0.25vw solid rgb(225, 147, 161);
-  border-radius: 5%;
-}
-
-h1 {
-  color: white;
-  text-align: center;
+#loginFormWrapper {
+  margin-bottom: 10%;
 }
