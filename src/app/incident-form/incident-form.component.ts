@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormBuilder, Form } from '@angular/forms';
+//interfaces
+import { IncidentData } from '../incident-data';
+import { priority } from '../priority';
+import { impact } from '../impact';
 
 @Component({
   selector: 'app-incident-form',
@@ -60,7 +64,56 @@ export class IncidentFormComponent implements OnInit {
     areaElement!.style.setProperty("height", `${this.area}vw`);
   }
 
+  // sendData(): IncidentData {
+  //   data: IncidentData
+  //   const incidentData = data;
+  //   console.debug(incidentData);
+  //   return incidentData;
+  // }
+
   sendData(): void {
+
+    const priority = this.priority!.value as priority | null;
+    const impact = this.impact!.value as impact | null;
+
+    const formData: IncidentData =
+    {
+      username: this.username!.value,
+      requestedFor: this.requestedFor!.value,
+      category: this.category!.value,
+      subcategory: this.subcategory!.value,
+      configurationItem: this.configurationItem!.value,
+      priority: priority,
+      impact: impact,
+      shortDescription: this.shortDescription!.value,
+      longDescription: this.longDescription!.value,
+    }
+
+    const formDataJson = JSON.stringify(formData);
+    // need to change fetch source
+    async () => {
+      const response = await fetch('', {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        headers: {
+          'Content-Type': 'multipart/form-data; boundary = aBoundaryString',
+          'Accept': 'text/plain, text/html, application/json',
+
+          'Content-Disposition': 'form-data; name="", inline',
+          // Content-Disposition: form-data; name="fieldName"
+        },
+        body: formDataJson,})
+        .then(response => {
+          const responseJson = response.json;
+          console.log(responseJson);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        })
+    };
+
+    this.incidentForm.reset();
     return;
   }
 }

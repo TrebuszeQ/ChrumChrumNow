@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, Validators } from '@angular/forms';
 
+// services
+import { AccountService } from '../account.service';
+
+//interfaces
+import { LoginData } from '../login-data';
+
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -22,60 +28,21 @@ export class LoginFormComponent implements OnInit {
   get password() {
     return this.loginForm.get('password');
   }
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private accountService: AccountService) { }
 
   ngOnInit(): void {
-    // const usernameInputElement = document.getElementById('username');
-    // const passwordInputElement = document.getElementById('password');
-    //listens to change in username input string
-    // usernameInputElement!.addEventListener('change', (event) => {
-    //   if(this.username!.length <= 0) {
-    //     this.usernameTrafficLights(false);
-    //   } else if(this.username.length > 0 || this.username === null) {
-    //     this.usernameTrafficLights(true);
-    //   }
-    // });
-    // //listens to change in password input string
-    // passwordInputElement!.addEventListener('change', (event) => {
-    //   if(this.password.length <= 0) {
-    //     this.passwordTrafficLights(false);
-    //   } else if(this.password.length > 0 || this.password === null) {
-    //     this.passwordTrafficLights(true);
-    //   }
-    // });
   }
 
 
+  sendData(data: LoginData) {
+    // const usernameInputElement = document.getElementById('username');
+    // const passwordInputElement = document.getElementById('password');
 
-  // usernameTrafficLights(isValid: boolean) {
-  //   console.log(this.username.length);
-  //   const usernameLightElement = document.getElementById('usernameLight');
-  //   if(isValid === true) {
-  //     usernameLightElement!.style.setProperty('background-color', 'green');
-  //   } else {
-  //     usernameLightElement!.style.setProperty('background-color', '#52192d');
-  //   }
-  //   return;
-  // }
+    this.accountService.sendData(data).subscribe( response => {
+      console.log(response);
+    })
 
-  // passwordTrafficLights(isValid: boolean) {
-  //   const passwordLightElement = document.getElementById('passwordLight');
-  //   if(isValid === true) {
-  //     passwordLightElement!.style.setProperty('background-color', 'green');
-  //   } else {
-  //     passwordLightElement!.style.setProperty('background-color', '#52192d');
-  //   }
-  //   return;
-  // };
-
-  sendData(username: unknown | null, password: unknown | null) {
-    const data = {
-      username: username,
-      password: password,
-    }
-    const dataJson = JSON.stringify(data);
-    console.log(dataJson);
-    const usernameInputElement = document.getElementById('username');
-    const passwordInputElement = document.getElementById('password');
+    this.loginForm.reset();
+    return;
   }
 }

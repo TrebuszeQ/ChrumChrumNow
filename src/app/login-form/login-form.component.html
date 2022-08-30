@@ -3,7 +3,7 @@
     <h1>ChrumChrumNow</h1>
     <h3>Ultimate piggy ticketing system.</h3>
   </div>
-  <form id="loginForm" accept-charset="utf-8" action="/" method="post" [formGroup]="loginForm" (reset)="this.loginForm.reset()" (ngSubmit)="sendData(username?.value, password?.value)">
+  <form id="loginForm" accept-charset="utf-8" action="/" method="post" [formGroup]="loginForm" (reset)="this.loginForm.reset()" (ngSubmit)="sendData({ username: this.username!.value, password: this.password!.value})">
     <!-- username input -->
     <label for="username">Username: </label> <br>
     <!-- red -->

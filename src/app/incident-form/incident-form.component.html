@@ -99,9 +99,9 @@
       <div class="formLight formLightGreen wrapper" *ngIf="longDescription?.valid">
       </div>
       <textarea id="longDescriptionArea" form="incidentForm" placeholder="Enter details of the problem here." rows="auto" formControlName="longDescription" minlength="1" maxlength="1000">
-        <p></p>
-
       </textarea>
-      <button id="spaceButton" type="button" (click)="increaseArea()">Increase text area space</button>
-  </form>
+      <button id="spaceButton" type="button" (click)="increaseArea()">More space</button>
+      <button id="submitIncident" type="submit" name="submitIncident" value="submit" [disabled]="!incidentForm.valid">Submit</button>
+      <button id="resetForm" type="reset" value="reset" [disabled]="incidentForm.untouched" (click)="this.incidentForm.reset()">Reset form</button>
+    </form>
 </div>
