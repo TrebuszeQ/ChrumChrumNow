@@ -1,0 +1,38 @@
+* {
+  scroll-behavior: smooth;
+}
+
+#loginPageWrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 10% 0 ;
+  max-width: 100%;
+  width: 100%;
+  max-height: 100vh;
+  height: 100vh;
+  background-color: #97d2c9;
+}
+
+#loginFormWrapper {
+  margin-bottom: 10%;
+}
+
+#title {
+  z-index: 9;
+  display: flex;
+  position: absolute;
+  margin-bottom: 90vh;
+  color: pink;
+  font-size: 10vw;
+}
+
+#title:hover {
+  z-index: 10;
+  background-color: #df8494;
+}
+

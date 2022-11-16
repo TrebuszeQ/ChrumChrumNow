@@ -7,12 +7,12 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 //Components
-import { LoginPageComponent } from './login-page/login-page.component';
-import { LoginFormComponent } from './login-form/login-form.component';
+import { LoginPageComponent } from './logging/login-page/login-page.component';
+import { LoginFormComponent } from './logging/login-form/login-form.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { HomepageNoAdminComponent } from './homepage-no-admin/homepage-no-admin.component';
-import { IncidentPageComponent } from './incident-page/incident-page.component';
-import { IncidentFormComponent } from './incident-form/incident-form.component';
+import { IncidentPageComponent } from './incidents/incident-page/incident-page.component';
+import { IncidentFormComponent } from './incidents/incident-form/incident-form.component';
 
 @NgModule({
   declarations: [

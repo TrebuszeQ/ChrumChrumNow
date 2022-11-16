@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormBuilder, Form } from '@angular/forms';
 //interfaces
-import { IncidentData } from '../incident-data';
-import { priority } from '../priority';
-import { impact } from '../impact';
+import { IncidentData } from '../interfaces/incident-data';
+import { priority } from '../types/priority';
+import { impact } from '../types/impact';
 
 @Component({
   selector: 'app-incident-form',

@@ -3,101 +3,99 @@
     <header id="headerWrapper">
       <h1>Create an incident</h1>
     </header>
-      <!-- username -->
-      <label for="usernameInput">Username </label>
       <!-- red -->
       <div class="formLight formLightRed wrapper" *ngIf="username?.invalid">
       </div>
       <!-- green -->
       <div class="formLight formLightGreen wrapper" *ngIf="username?.valid">
       </div>
+      <!-- username -->
+      <label for="usernameInput">Username </label>
       <!-- input -->
       <input id="usernameInput" type="text" placeholder="Enter your username here" formControlName="username" minlength="7" maxlength="7">
 
-      <!-- requestedFor -->
-      <label for="requestedForInput">Requested for</label>
       <!-- red -->
       <div class="formLight formLightRed wrapper" *ngIf="requestedFor?.invalid">
       </div>
       <!-- green -->
       <div class="formLight formLightGreen wrapper" *ngIf="requestedFor?.valid">
       </div>
+      <!-- requestedFor -->
+      <label for="requestedForInput">Requested for</label>
       <!-- input -->
       <input id="requestedForInput" type="text" placeholder="Who is having problem?" formControlName="requestedFor" minlength="5" maxlength="50">
 
-      <!-- category -->
-      <label for="categoryInput">Category </label>
       <!-- red -->
       <div class="formLight formLightRed wrapper" *ngIf="category?.invalid">
       </div>
       <!-- green -->
       <div class="formLight formLightGreen wrapper" *ngIf="category?.valid">
       </div>
+      <!-- category -->
+      <label for="categoryInput">Category </label>
       <!-- input -->
       <input id="categoryInput" type="text" placeholder="Enter category of the problem." formControlName="category" minlength="2" maxlength="50">
 
-
-      <!-- subcategory -->
-      <label for="subcategoryInput">Subcategory </label>
       <!-- red -->
       <div class="formLight formLightRed wrapper" *ngIf="subcategory?.invalid">
       </div>
       <!-- green -->
       <div class="formLight formLightGreen wrapper" *ngIf="subcategory?.valid">
       </div>
+      <!-- subcategory -->
+      <label for="subcategoryInput">Subcategory </label>
       <!-- input -->
       <input id="subcategoryInput" type="text" placeholder="Enter subcategory of the problem." formControlName="subcategory" minlength="2" maxlength="50">
 
-      <!-- configuration item -->
-      <label for="configurationItemInput">Configuration item </label>
       <!-- red -->
       <div class="formLight formLightRed wrapper" *ngIf="configurationItem?.invalid">
       </div>
       <!-- green -->
       <div class="formLight formLightGreen wrapper" *ngIf="configurationItem?.valid">
       </div>
+      <!-- configuration item -->
+      <label for="configurationItemInput">Configuration item </label>
       <!-- input -->
       <input id="configurationItemInput" type="text" placeholder="What is main subject of the problem?" formControlName="configurationItem" minlength="2" maxlength="50">
 
-      <!-- priority -->
-      <label for="priorityInput">Priority </label>
       <!-- red -->
       <div class="formLight formLightRed wrapper" *ngIf="priority?.invalid">
       </div>
       <!-- green -->
       <div class="formLight formLightGreen wrapper" *ngIf="priority?.valid">
+      <!-- priority -->
+      <label for="priorityInput">Priority </label>
       </div>
       <input id="priorityInput" type="number" placeholder="What is priority of the problem?" formControlName="priority" min="1" max="4">
 
-
-      <!-- impact -->
-      <label for="impactInput">Impact </label>
       <!-- red -->
       <div class="formLight formLightRed wrapper" *ngIf="impact?.invalid">
       </div>
       <!-- green -->
       <div class="formLight formLightGreen wrapper" *ngIf="impact?.valid">
       </div>
+      <!-- impact -->
+      <label for="impactInput">Impact </label>
       <input id="impactInput" type="number" placeholder="What is impact of the problem?" formControlName="impact" min="1" max="4">
 
-      <!-- short description -->
-      <label for="shortDescriptionInput">Short description </label>
       <!-- red -->
       <div class="formLight formLightRed wrapper" *ngIf="shortDescription?.invalid">
       </div>
       <!-- green -->
       <div class="formLight formLightGreen wrapper" *ngIf="shortDescription?.valid">
       </div>
+      <!-- short description -->
+      <label for="shortDescriptionInput">Short description </label>
       <input id="shortDescriptionInput" type="text" placeholder="Enter silhouette of the problem here." formControlName="shortDescription" minlength="10" maxlength="50">
 
-      <!-- long description -->
-      <label for="longDescriptionArea">Long description </label>
       <!-- red -->
       <div class="formLight formLightRed wrapper" *ngIf="longDescription?.invalid">
       </div>
       <!-- green -->
       <div class="formLight formLightGreen wrapper" *ngIf="longDescription?.valid">
       </div>
+      <!-- long description -->
+      <label for="longDescriptionArea">Long description </label>
       <textarea id="longDescriptionArea" form="incidentForm" placeholder="Enter details of the problem here." rows="auto" formControlName="longDescription" minlength="1" maxlength="1000">
       </textarea>
       <button id="spaceButton" type="button" (click)="increaseArea()">More space</button>

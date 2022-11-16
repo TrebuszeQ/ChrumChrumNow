@@ -1,5 +1,5 @@
-import { priority } from "./priority";
-import { impact } from "./impact";
+import { priority } from "../types/priority";
+import { impact } from "../types/impact";
 
 export interface IncidentData {
   username: string | null;

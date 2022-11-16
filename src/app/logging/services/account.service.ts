@@ -2,18 +2,18 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 //Interfaces
-import { Account } from './account';
-import { IncidentData } from './incident-data';
-import { LoginData } from './login-data';
+import { Account } from '../logging-interfaces/account-interface';
+import { LoginData } from '../logging-interfaces/login-data';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class AccountService {
+export class LoggingService {
 
   constructor() { }
 
-  sendData(formData: IncidentData | LoginData): Observable<Response|any>
+  sendData(formData: LoginData): Observable<Response|any>
   {
     // need to change POST source
     async () => {
@@ -22,17 +22,21 @@ export class AccountService {
         mode: 'cors',
         cache: 'no-cache',
         headers: {
-          'Accept': 'text/html, application/json',
-          'Content-Type': 'multipart/form-data; boundary = aBoundaryString',
+          'Accept': 'application/json',
+          'Content-Type': 'multipart/form-data',
+          
         },
         body: JSON.stringify(formData),
       })
       .then(response => {
         const responseJson = response.json;
-        return of(responseJson);
+        if(response.ok) {
+          alert("Authorization succeeded.")
+        }
       })
       .catch((error) => {
         console.error('Error:', error);
+        alert(error);
         return of(error);
       })
     }

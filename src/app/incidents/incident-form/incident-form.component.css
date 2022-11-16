@@ -1,9 +1,11 @@
 #formWrapper {
-  display: flex;
-  flex-flow: column;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  /* flex-flow: row;
+  flex-wrap: nowrap; */
   z-index: 9;
   overflow-x: hidden;
+  padding: 0 2%;
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -22,16 +24,16 @@
 }
 
 #headerWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 20vw;
-  padding: 5%;
-  margin: 0 0 7% 0;
+  height: 10vw;
+  padding: 2%;
+  margin: 0 0 2% 0;
   background-color: pink;
-}
-
-#headerWrapper > h1 {
-  color: white;
-  text-align: center;
 }
 
 label, button, input, .formLight {
@@ -51,18 +53,19 @@ label, button, input, .formLight {
 }
 
 label {
-  padding: 5% 0;
-  margin-top: 2%;
-  height: 5vw;
-  max-height: 5vw;
+  padding: 2% 0;
+  margin-bottom: 0 0;
+  height: 3vw;
+  max-height: 3vw;
   color: rgb(177, 90, 118);
   background-color: pink;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 input, button {
-  height: 7vw;
-  max-height: 7vw;
+  height: 3vw;
+  max-height: 3vw;
+  margin: 0 0 2% 0;
   padding: 2%;
   background-color: pink;
   border: none;
@@ -83,8 +86,8 @@ button:disabled {
 }
 
 .formLight {
-  height: 2vw;
-  max-height: 2vw;
+  height: 0.5vw;
+  max-height: 0.5vw;
   margin: 0;
 }
 
@@ -96,6 +99,7 @@ button:disabled {
 
 #longDescriptionArea {
   height:20vw;
+  margin: 0 0 2% 0;
   padding: 2%;
   resize: vertical;
   color: white;

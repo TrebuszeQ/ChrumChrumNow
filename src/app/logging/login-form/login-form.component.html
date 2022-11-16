@@ -1,0 +1,58 @@
+<div id="loginFormWrapper" class="wrapper">
+  <form id="loginForm" accept-charset="utf-8" action="" method="POST" [formGroup]="loginForm" (reset)="this.loginForm.reset()" (ngSubmit)="sendData({ username: this.username!.value, password: this.password!.value})">
+    <!-- form status
+    <h3 id="formStatus">
+      <br>Form status:
+      <br>{{loginForm.status}}
+    </h3> -->
+
+    <!-- eyes -->
+    <div id="eyes" class="wrapper">
+      <aside id="asideLeft" class="aside">
+        <!-- username input -->
+        <!-- red -->
+        <div class="formLight formLightLeft formLightRed wrapper" *ngIf="username?.invalid">
+        </div>
+        <!-- green -->
+        <div class="formLight formLightLeft formLightGreen wrapper" *ngIf="username?.valid">
+        </div>
+        <label for="username"> <h3>Username:</h3> </label> <br>
+        <!-- input -->
+        <input id="username" type="text" placeholder="Username" minlength="4" maxlength="30" required formControlName="username"> <br>
+      </aside>
+      <aside id="asideRight" class="aside">
+        <!-- password input -->
+        <!-- green -->
+        <div class="formLight formLightRight formLightRed wrapper" *ngIf="password?.invalid">
+        </div>
+        <!-- red -->
+        <div class="formLight formLightRight formLightGreen wrapper" *ngIf="password?.valid">
+        </div>
+        <label for="password"><h3>Password:</h3></label> <br>
+        <!-- input -->
+        <input id="password" type="password"  placeholder="Password" minlength="8" maxlength="30" required formControlName="password"> <br>
+      </aside>
+    </div>
+
+    <!-- submit -->
+    <div id="mouth" class="wrapper">
+      <button id="loginButton" class="loginFormButton" type="submit" value="submit" [disabled]="!loginForm.valid">
+        Login
+      </button>
+
+      <!-- reset -->
+      <button id="resetButton" class="loginFormButton" type="reset" value="reset" [disabled]="loginForm.untouched">
+        Reset
+      </button>
+    </div>
+  </form>
+</div>
+
+<!-- misc, legs -->
+<div id="leftFrontLeg" class="leg"></div>
+<div id="rightFrontLeg" class="leg"></div>
+<div id="leftBackLeg" class="leg"></div>
+<div id="rightBackLeg" class="leg"></div>
+
+<!-- templates -->
+<template></template>
